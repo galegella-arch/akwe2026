@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ISUFST San Enrique Campus Directory</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    color: #182b3a;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --navy: #0b2639;
+    --blue: #174a6b;
+    --gold: #d6a62c;
+    --light-gold: #f4d77d;
+    --cream: #f8f4e8;
+    --gray: #687886;
+    --white: #fff;
+    --border: #dfe5e9;
+}
+
+/* =====================================================
+   TOP NAV
+===================================================== */
+
+.top-nav {
+    position: absolute;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1150px, 90%);
+
+    z-index: 100;
+}
+
+.nav-box {
+    background: rgba(11, 38, 57, .92);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    border-radius: 50px;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-weight: bold;
+
+    padding-left: 10px;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 3px;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #dce7ee;
+
+    padding: 9px 13px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    background: var(--gold);
+
+    color: var(--navy);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        linear-gradient(
+            rgba(6, 29, 45, .82),
+            rgba(11, 38, 57, .94)
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 100px 20px 70px;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border: 80px solid rgba(214,166,44,.07);
+
+    border-radius: 50%;
+
+    left: -250px;
+    bottom: -300px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 60px solid rgba(255,255,255,.04);
+
+    border-radius: 50%;
+
+    right: -200px;
+    top: -250px;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+}
+
+.hero-logo {
+    width: 130px;
+    height: 130px;
+
+    object-fit: contain;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.3);
+}
+
+.hero-kicker {
+    color: var(--light-gold);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 60px);
+
+    line-height: 1.05;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--light-gold);
+}
+
+.hero h2 {
+    color: #d4e0e7;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #aebfca;
+
+    font-size: 15px;
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.container {
+    width: min(1150px, 90%);
+
+    margin: auto;
+}
+
+section {
+    margin: 100px 0;
+
+    scroll-margin-top: 50px;
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-header {
+    margin-bottom: 35px;
+}
+
+.section-header small {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    color: var(--navy);
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    margin-top: 6px;
+}
+
+.section-header p {
+    color: var(--gray);
+
+    max-width: 650px;
+
+    margin-top: 8px;
+}
+
+/* =====================================================
+   PRESIDENT FEATURE
+===================================================== */
+
+.president-feature {
+    display: grid;
+
+    grid-template-columns: 48% 52%;
+
+    background: var(--navy);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(11,38,57,.15);
+}
+
+.president-image {
+    min-height: 440px;
+
+    position: relative;
+}
+
+.president-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.president-label {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.president-content {
+    padding: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    color: white;
+}
+
+.president-content small {
+    color: var(--light-gold);
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.president-content h3 {
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    margin: 15px 0;
+}
+
+.president-content p {
+    color: #b8c8d2;
+
+    font-size: 14px;
+}
+
+/* =====================================================
+   ADMINISTRATION
+===================================================== */
+
+.admin-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.admin-item {
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--border);
+
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns: 130px 1fr;
+
+    align-items: center;
+
+    transition: .3s;
+}
+
+.admin-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(11,38,57,.10);
+}
+
+.admin-item img {
+    width: 130px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.admin-content {
+    padding: 20px;
+}
+
+.admin-content small {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.admin-content h3 {
+    color: var(--navy);
+
+    font-size: 19px;
+
+    margin: 7px 0;
+}
+
+.admin-content p {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+/* =====================================================
+   DEAN FEATURE TILES
+===================================================== */
+
+.dean-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.dean {
+    height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: var(--navy);
+
+    transition: .35s;
+}
+
+.dean:hover {
+    transform: translateY(-8px);
+}
+
+.dean img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.dean:hover img {
+    transform: scale(1.06);
+}
+
+.dean::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(4,22,34,.95) 100%
+        );
+}
+
+.dean-info {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 0;
+    left: 0;
+
+    padding: 22px;
+
+    color: white;
+}
+
+.dean-info small {
+    color: var(--light-gold);
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.dean-info h3 {
+    font-size: 17px;
+
+    margin: 5px 0;
+}
+
+.dean-info p {
+    color: #c1ced6;
+
+    font-size: 11px;
+}
+
+/* =====================================================
+   FACULTY PHOTO WALL
+===================================================== */
+
+.faculty-wall {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 12px;
+}
+
+.faculty-member {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    transition: .3s;
+}
+
+.faculty-member:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(11,38,57,.09);
+}
+
+.faculty-member img {
+    width: 95px;
+    height: 95px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin: 0 auto 12px;
+
+    border: 4px solid #f2df9f;
+}
+
+.faculty-member h3 {
+    color: var(--navy);
+
+    font-size: 13px;
+
+    line-height: 1.3;
+}
+
+.faculty-member p {
+    color: var(--gray);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+}
+
+/* =====================================================
+   ACKWEE TIMELINE
+===================================================== */
+
+.timeline {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #d9c27b;
+
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+
+    padding: 15px 40px;
+
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    background: var(--gold);
+
+    border: 4px solid var(--cream);
+
+    border-radius: 50%;
+
+    top: 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
+
+.timeline-card {
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid var(--border);
+
+    padding: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(11,38,57,.06);
+}
+
+.timeline-card .date {
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.timeline-card h3 {
+    color: var(--navy);
+
+    font-size: 17px;
+
+    margin: 6px 0;
+}
+
+.timeline-card p {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+/* =====================================================
+   PHOTO DOCUMENTATION
+===================================================== */
+
+.documentation {
+    background: var(--navy);
+
+    border-radius: 25px;
+
+    padding: 50px;
+}
+
+.documentation .section-header h2 {
+    color: white;
+}
+
+.documentation .section-header p {
+    color: #aebfca;
+}
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.photo-card {
+    min-height: 210px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b98917,
+            #eed36c
+        );
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+.photo-content {
+    width: 100%;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(5,25,39,.92)
+        );
+
+    padding-top: 65px;
+
+    color: white;
+}
+
+.photo-content h3 {
+    font-size: 16px;
+}
+
+.photo-content p {
+    color: #d5e0e6;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+.photo-button {
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    transition: .3s;
+}
+
+.photo-button:hover {
+    transform: scale(1.12);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #061b29;
+
+    color: #9fb1bd;
+
+    padding: 55px 20px;
+
+    text-align: center;
+}
+
+footer img {
+    width: 65px;
+    height: 65px;
+
+    background: white;
+
+    padding: 4px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 15px;
+}
+
+footer h3 {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+footer strong {
+    color: var(--light-gold);
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width: 950px) {
+
+    .nav-links a {
+        padding: 8px;
+    }
+
+    .dean-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .faculty-wall {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .photo-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 650px) {
+
+    .top-nav {
+        top: 10px;
+
+        width: 94%;
+    }
+
+    .nav-box {
+        border-radius: 15px;
+
+        overflow-x: auto;
+    }
+
+    .nav-logo span {
+        display: none;
+    }
+
+    .nav-links {
+        flex-shrink: 0;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 560px;
+
+        padding-top: 110px;
+    }
+
+    .hero-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    section {
+        margin: 65px 0;
+    }
+
+    .president-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .president-image {
+        min-height: 320px;
+    }
+
+    .president-content {
+        padding: 35px 25px;
+    }
+
+    .president-content h3 {
+        font-size: 27px;
+    }
+
+    .admin-list {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-item {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .admin-item img {
+        width: 100px;
+        height: 130px;
+    }
+
+    .admin-content {
+        padding: 12px;
+    }
+
+    .dean-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dean {
+        height: 280px;
+    }
+
+    .faculty-wall {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+
+        left: 0;
+
+        text-align: left;
+
+        padding-left: 35px;
+
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 2px;
+        right: auto;
+    }
+
+    .documentation {
+        padding: 30px 20px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="top-nav">
+
+    <div class="nav-box">
+
+        <a href="#home" class="nav-logo">
+
+            <img
+                src="image/ISUFST logo.jpg"
+                alt="ISUFST"
+            >
+
+            <span>
+                ISUFST SAN ENRIQUE
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#leadership">
+                Leadership
+            </a>
+
+            <a href="#administration">
+                Administration
+            </a>
+
+            <a href="#deans">
+                Deans
+            </a>
+
+            <a href="#faculty">
+                Faculty
+            </a>
+
+            <a href="#activities">
+                ACKWEE2026
+            </a>
+
+            <a href="#photos">
+                Photos
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <img
+            src="image/ISUFST logo.jpg"
+            alt="ISUFST Logo"
+            class="hero-logo"
+        >
+
+        <div class="hero-kicker">
+            San Enrique Campus
+        </div>
+
+        <h1>
+            Iloilo State University of
+            Fisheries Science and Technology
+            <span>Directory</span>
+        </h1>
+
+        <h2>
+            Campus Organizational Directory
+        </h2>
+
+        <p>
+            University leadership • Academic officials •
+            Faculty & Staff • Campus Activities
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- =====================================================
+     PRESIDENT
+===================================================== -->
+
+<section id="leadership">
+
+    <div class="section-header">
+
+        <small>
+            University Leadership
+        </small>
+
+        <h2>
+            Office of the President
+        </h2>
+
+        <p>
+            Leading the university toward excellence,
+            innovation, and service.
+        </p>
+
+    </div>
+
+
+    <div class="president-feature">
+
+        <div class="president-image">
+
+            <img
+                src="image/president.png"
+                alt="Dr. Nordy D. Siason"
+            >
+
+            <div class="president-label">
+                University President
+            </div>
+
+        </div>
+
+
+        <div class="president-content">
+
+            <small>
+                University President
+            </small>
+
+            <h3>
+                Dr. Nordy D. Siason, Jr., CESO VI
+            </h3>
+
+            <p>
+                Office of the President
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADMINISTRATION
+===================================================== -->
+
+<section id="administration">
+
+    <div class="section-header">
+
+        <small>
+            Campus Management
+        </small>
+
+        <h2>
+            Campus Administration
+        </h2>
+
+        <p>
+            Officials overseeing campus operations
+            and administrative services.
+        </p>
+
+    </div>
+
+
+    <div class="admin-list">
+
+
+        <article class="admin-item">
+
+            <img
+                src="image/campusAd.png"
+                alt="Dr. Michael B. Dizon"
+            >
+
+            <div class="admin-content">
+
+                <small>
+                    Campus Administrator
+                </small>
+
+                <h3>
+                    Dr. Michael B. Dizon
+                </h3>
+
+                <p>
+                    Office of Campus Administration
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="admin-item">
+
+            <img
+                src="image/AdminOfficer.png"
+                alt="Mrs. Melby Parreño"
+            >
+
+            <div class="admin-content">
+
+                <small>
+                    Administrative Officer
+                </small>
+
+                <h3>
+                    Mrs. Melby Parreño
+                </h3>
+
+                <p>
+                    Administrative Services Office
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DEANS
+===================================================== -->
+
+<section id="deans">
+
+    <div class="section-header">
+
+        <small>
+            Academic Leadership
+        </small>
+
+        <h2>
+            Deans of Academic Units
+        </h2>
+
+        <p>
+            Academic leaders representing the
+            university's academic colleges.
+        </p>
+
+    </div>
+
+
+    <div class="dean-grid">
+
+
+        <article class="dean">
+
+            <img
+                src="image/cici.png"
+                alt="Dr. Wenda D. Panes"
+            >
+
+            <div class="dean-info">
+
+                <small>
+                    Dean
+                </small>
+
+                <h3>
+                    Dr. Wenda D. Panes
+                </h3>
+
+                <p>
+                    College of Information &
+                    Computing Innovation
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="dean">
+
+            <img
+                src="image/cbmsd.png"
+                alt="Dr. Janice H. Ching"
+            >
+
+            <div class="dean-info">
+
+                <small>
+                    Dean
+                </small>
+
+                <h3>
+                    Dr. Janice H. Ching
+                </h3>
+
+                <p>
+                    College of Business,
+                    Management & Sustainable Development
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="dean">
+
+            <img
+                src="image/coag.png"
+                alt="Dr. Noli L. Gerona"
+            >
+
+            <div class="dean-info">
+
+                <small>
+                    Dean
+                </small>
+
+                <h3>
+                    Dr. Noli L. Gerona
+                </h3>
+
+                <p>
+                    College of Agriculture
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="dean">
+
+            <img
+                src="image/coed.png"
+                alt="Dr. Rene T. Estomo"
+            >
+
+            <div class="dean-info">
+
+                <small>
+                    Dean
+                </small>
+
+                <h3>
+                    Dr. Rene T. Estomo
+                </h3>
+
+                <p>
+                    College of Education
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FACULTY
+===================================================== -->
+
+<section id="faculty">
+
+    <div class="section-header">
+
+        <small>
+            Academic Personnel
+        </small>
+
+        <h2>
+            CICI Faculty & Staff
+        </h2>
+
+        <p>
+            Faculty and staff members of the College of
+            Information & Computing Innovation.
+        </p>
+
+    </div>
+
+
+    <div class="faculty-wall">
+
+
+        <article class="faculty-member">
+
+            <img src="image/dave.png">
+
+            <h3>
+                Prof. Allan Dave Tagacay
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+
+        <article class="faculty-member">
+
+            <img src="image/Weena.png">
+
+            <h3>
+                Dr. Weena Bulnes
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+         <article class="faculty-member">
+
+            <img src="image/Annaliza.png">
+
+            <h3>
+                Prof. Annaliza Alingalan
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+
+        <article class="faculty-member">
+
+            <img src="image/Dacudao.png">
+
+            <h3>
+                Dr. Dythne Dacudao
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+         <article class="faculty-member">
+
+            <img src="image/Ian.png">
+
+            <h3>
+                Ian Sugatan
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+
+        <article class="faculty-member">
+
+            <img src="image/Ian.png">
+
+            <h3>
+                Prof. Ivan Selvestre
+            </h3>
+
+            <p>
+                CICI Faculty
+            </p>
+
+        </article>
+
+
+        <article class="faculty-member">
+
+            <img src="image/Andrea.png">
+
+            <h3>
+                Ms. Andrea Delos Santos
+            </h3>
+
+            <p>
+                CICI Staff
+            </p>
+
+        </article>
+
+
+        <article class="faculty-member">
+
+            <img src="image/Mike.png">
+
+            <h3>
+                Mr. Michael Borcillo
+            </h3>
+
+            <p>
+                CICI Staff
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACKWEE TIMELINE
+===================================================== -->
+
+<section id="activities">
+
+    <div class="section-header">
+
+        <small>
+            Campus Celebration
+        </small>
+
+        <h2>
+            ACKWEE2026
+        </h2>
+
+        <p>
+            CICI activities and participation during
+            the 2026 Acquaintance celebration.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    September 17, 2026
+                </div>
+
+                <h3>
+                    💃 Street Dance Competition
+                </h3>
+
+                <p>
+                    CICI participants prepare and perform
+                    for the Street Dance competition.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    September 17, 2026
+                </div>
+
+                <h3>
+                    🎭 Final Performance Competition
+                </h3>
+
+                <p>
+                    Group performances showcasing creativity,
+                    teamwork, preparation, and campus spirit.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    September 17, 2026
+                </div>
+
+                <h3>
+                    🏆 Laro ng Lahi
+                </h3>
+
+                <p>
+                    Traditional Filipino games encouraging
+                    camaraderie, fun, and sportsmanship.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    September 18, 2026
+                </div>
+
+                <h3>
+                    🌈 LGBTQIA+ Activities
+                </h3>
+
+                <p>
+                    Inclusive activities featuring LGBTQIA+
+                    participants during the celebration.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    September 18, 2026
+                </div>
+
+                <h3>
+                    👑 Mr. & Ms. Acquaintance
+                </h3>
+
+                <p>
+                    Pageant-related activities and participation
+                    of CICI candidates.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+                <div class="date">
+                    CICI Student Activities
+                </div>
+
+                <h3>
+                    🤝 Teamwork & Coordination
+                </h3>
+
+                <p>
+                    Student officers and participants coordinate
+                    costumes, performances, and event requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PHOTO DOCUMENTATION
+===================================================== -->
+
+<section id="photos" class="documentation">
+
+    <div class="section-header">
+
+        <small>
+            Event Media
+        </small>
+
+        <h2>
+            ACKWEE2026 Photo Documentation
+        </h2>
+
+        <p>
+            Click a photo button to open the corresponding
+            Google Drive folder.
+        </p>
+
+    </div>
+
+
+    <div class="photo-grid">
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/12uKJ6Avn1VYOUaYPMo1uClDQ-tprPGOp?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    Street Dance Competition
+                </h3>
+
+                <p>
+                    September 17, 2026
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/1r7WAfCUUHcWhoOaWiFvidsfgmZ-Tm7vj?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    Final Performance Competition
+                </h3>
+
+                <p>
+                    September 17, 2026
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/1jCmZe2XV5uvShLHm5xE2NWlRe4JknBDw?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    Laro ng Lahi
+                </h3>
+
+                <p>
+                    September 17, 2026
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/1SAWRLzCqNK7Z9sa5kOfDF21bXkFRMiK6?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    LGBTQIA+ Activities
+                </h3>
+
+                <p>
+                    September 18, 2026
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/1TJYIQoKbs9m7NSdgoVmat0sXapP2d5Br?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    Mr. & Ms. Acquaintance
+                </h3>
+
+                <p>
+                    September 18, 2026
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="photo-card">
+
+            <a
+                class="photo-button"
+                href="https://drive.google.com/drive/folders/1W6WNKU5bpEuNO7iSne-D7w9SOpYlGXhv?usp=sharing"
+                target="_blank"
+            >
+                📸
+            </a>
+
+            <div class="photo-content">
+
+                <h3>
+                    CICI Student Activities
+                </h3>
+
+                <p>
+                    CICI Acquaintance Party
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <img
+        src="image/ISUFST logo.jpg"
+        alt="ISUFST Logo"
+    >
+
+    <h3>
+        Iloilo State University of Fisheries
+        Science and Technology
+    </h3>
+
+    <p>
+        <strong>San Enrique Campus</strong>
+        — Campus Organizational Directory
+    </p>
+
+    <p style="margin-top:12px;">
+        © 2026 ISUFST San Enrique Campus
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
